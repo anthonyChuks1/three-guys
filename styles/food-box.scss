@@ -1,0 +1,96 @@
+$base-border-color : black;
+.food-box {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  border: 5px  inset $base-border-color;
+  border-radius: 5px;
+  background-color: azure;
+  background-image: url(/fries.png);
+  background-size: cover;
+  background-position: center;
+
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    color: azure;
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+  }
+
+  .content {
+    flex: 1;
+    background: transparent;
+  }
+
+  .footer {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    color: #ffbf00;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+
+    button {
+      width: 80px;
+      height: 30px;
+      font-size: 30px;
+      color: #ffffffcf;
+      background-color: #000000cf;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.food-box:hover {
+  box-shadow: 7px 7px 7px #ffbf00;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile Formatting */
+@media only screen and (max-width: 768px) {
+  .food-box {
+    width: 200px; /* Smaller width */
+    height: 200px; /* Smaller height */
+    margin: 5px; /* Add some margin between items */
+  }
+
+  .header {
+    font-size: 20px !important; /* Adjust font size for mobile */
+  }
+
+  .footer {
+    font-size: 20px !important; /* Adjust font size for mobile */
+    
+    button {
+      width: 60px !important;/* Smaller button width */
+      height: 25px; /* Smaller button height */
+      font-size: 18px !important; /* Adjust button font size */
+    }
+  }
+}

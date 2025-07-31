@@ -1,0 +1,34 @@
+body {
+  background: skyblue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// Food Squares Grid
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vw;
+  width: auto;
+  /* Adjust width to auto */
+  margin-top: 190px;
+  justify-content: center;
+}
+
+/* Responsive Design */
+/* Desktop Formatting */
+
+@media only screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
