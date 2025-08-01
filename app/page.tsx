@@ -1,22 +1,16 @@
 import FoodCard from "@/components/FoodCard";
 import Header from "@/components/Header";
+import FoodLists from "@/db/FoodLists";
 
 
 export default function Home() {
   return (
     <>
       <Header />
-      {/* visual aid */}
-      <FoodCard
-        name="Burger"
-        description="Simple burger"
-        price={100.0}
-        image="/images/burger.jpg"
-        rating={5}
-        deliveryTime="20-30 min"
-        category="Burgers"
-        onAddToCart={() => {}}
-      />
+      {/* Food card grid*/}
+      {FoodLists.map((food, index) => (
+        <FoodCard key={index} {...food}/>
+      ))}
     </>
   );
 }
